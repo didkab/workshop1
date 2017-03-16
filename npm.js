@@ -1,3 +1,5 @@
+var _ = require("lodash");
+
 var users = [
   {
     firstName: 'Janez',
@@ -16,3 +18,9 @@ var users = [
     lastName: 'Kovač'
   }
 ];
+
+var fullUsers = _.map(users, function (u) {
+    return u.firstName + " " + u.lastName;
+});
+
+console.log(fullUsers);
